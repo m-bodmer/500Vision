@@ -176,4 +176,19 @@ body {
   height: 300px;
   margin: 5px;
   overflow: hidden;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000337}}
+.artboard .photos .item .caption {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000344}}
+.artboard .photos .item .caption h3, .artboard .photos .item .caption p {
+  color: white;
+  margin: 20px;
 }
