@@ -12,7 +12,7 @@ $(document).ready ->
              <h3>#{photo.name}</h3>
              <p>#{photo.description}</p>
            </div>
-          <img src=#{photoURL}  />
+          <img data-src=#{photoURL}  />
           </div>
         </a>"
       $('.photos').append(photoImage)
@@ -28,6 +28,7 @@ $(document).ready ->
       , (response) ->
         $('.photos').empty()
         doStuffWithPhotos(response.data.photos)
+        $('.item img').unveil()
 
     $("#popular").click ->
       $(this).toggleClass 'active'
@@ -39,6 +40,16 @@ $(document).ready ->
       , (response) ->
         $('.photos').empty()
         doStuffWithPhotos(response.data.photos)
+        $('.item img').unveil()
+
+    $('.wrap').infinitescroll ->
+      console.log 'scrolling'
+      # _500px.api "/photos",
+      #   feature: 'popular',
+      #   image_size: 440
+      #   page: 1
+      # , (response) ->
+      #   doStuffWithPhotos(response.data.photos)
 
   setPhotoProperties = ->
     $(document).on "dragstart", ".photos .item", (e) ->
@@ -63,6 +74,7 @@ $(document).ready ->
       page: 1
     , (response) ->
       doStuffWithPhotos(response.data.photos)
+      $('.item img').unveil()
 
     bindEvents()
     setPhotoProperties()
