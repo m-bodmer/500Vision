@@ -3,27 +3,24 @@
 # Created by: Marc Bodmer
 $(document).ready -> 
 
-  doStuffWithPhoto = ->
-    console.log "Here"
+  doStuffWithPhotos = (photos) ->
+    $.each photos, (index, photo) ->
+      console.log index
+      console.log photo
+      console.log '-------'
+      photoURL = photo.image_url
+      photoImage = "<img src=\" " + photoURL + "\"/>"
+      $('#photos').append(photoImage)
 
   init = ->
-    console.log "Welcome to your new vision"
-
     # Grab 500px API Data
     # TODO: Make this private eventually....
     _500px.init({sdk_key: 'e4671f3b61a876dfe887c5031b43d3dd900b63ce'})
-    _500px.api "/photos?feature=popular",
-      term: "sunny"
-      image_size: 3
+    _500px.api "/photos",
+      feature: 'popular',
+      image_size: 440
       page: 1
     , (response) ->
-      # Do stuff here
-      console.table(response)
-      photoOne = response.data.photos[0]
-      photoURL = photoOne.image_url
-      photoImage = "<img src=\" " + photoURL + "\"/>"
-      # $('#photo').html(photoImage)
-
-      doStuffWithPhoto()
+      doStuffWithPhotos(response.data.photos)
 
   init()  
