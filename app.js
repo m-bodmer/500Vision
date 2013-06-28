@@ -11,13 +11,14 @@
       _500px.init({
         sdk_key: 'e4671f3b61a876dfe887c5031b43d3dd900b63ce'
       });
-      return _500px.api("/photos/search", {
+      return _500px.api("/photos?feature=popular", {
         term: "sunny",
         image_size: 3,
         page: 1
       }, function(response) {
         var photoImage, photoOne, photoURL;
 
+        console.table(response);
         photoOne = response.data.photos[0];
         photoURL = photoOne.image_url;
         photoImage = "<img src=\" " + photoURL + "\"/>";
