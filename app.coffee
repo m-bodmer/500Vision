@@ -47,6 +47,8 @@ $(document).ready ->
       _500px.api "/photos",
         feature: 'editors',
         image_size: 440
+        only: 'Nude'
+        # exclude: 4
         rpp: 24
         page: page
       , (response) ->
@@ -60,6 +62,8 @@ $(document).ready ->
       _500px.api "/photos",
         feature: 'popular',
         image_size: 440
+        only: 'Nude'
+        # exclude: 4
         rpp: 24
         page: page
       , (response) ->
@@ -71,10 +75,11 @@ $(document).ready ->
       if lock is false and $(window).scrollTop() > $(document).height() - $(window).height() * 2
         lock = true
         page++
-        console.log page
         _500px.api "/photos",
           feature: 'popular',
           image_size: 440
+          only: 'Nude'
+          # exclude: 4
           rpp: 24
           page: page
         , (response) ->
@@ -101,6 +106,8 @@ $(document).ready ->
     _500px.api "/photos",
       feature: 'popular',
       image_size: 440
+      only: 'Nude'
+      # exclude: 4
       rpp: 24
       page: page
     , (response) ->
