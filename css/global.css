@@ -129,3 +129,7 @@ body {
   margin: auto;
   width: 100%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000318}}
+.artboard .photos .item {
+  float: left;
+}

@@ -1,7 +1,7 @@
 # 500px Hack Day Project
 # May 24, 2013
 # Created by: Marc Bodmer
-$(document).ready -> 
+$(document).ready ->
 
   doStuffWithPhotos = (photos) ->
     $.each photos, (index, photo) ->
@@ -9,8 +9,8 @@ $(document).ready ->
       console.log photo
       console.log '-------'
       photoURL = photo.image_url
-      photoImage = "<img src=\" " + photoURL + "\"/>"
-      $('#photos').append(photoImage)
+      photoImage = "<div class='item'><img src=\" " + photoURL + "\"/></div>"
+      $('.photos').append(photoImage)
 
   init = ->
     # Grab 500px API Data
@@ -23,4 +23,4 @@ $(document).ready ->
     , (response) ->
       doStuffWithPhotos(response.data.photos)
 
-  init()  
+  init()
