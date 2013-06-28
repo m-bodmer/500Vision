@@ -6,34 +6,37 @@ html
   font-family: Helvetica
 
 body
-  background: #EFEFEF
+  background: #222
   // background-colorrgba(50,50,50,1);
   // background:  @include filter-gradient(#323232, #323232, horizontal);
   // background: @include background-image(radial-gradient( center, ellipse cover, rgba(50,50,50,1) 0%, rgba(50,50,50,1) 28%, rgba(34,34,34,1) 100%));
 
   background: -webkit-radial-gradient(center, ellipse cover, rgba(50,50,50,1) 0%, rgba(50,50,50,1) 28%, rgba(34,34,34,1) 100%)
 .artboard
+  margin: 10px 0 0 0
   .photos
     margin: 0 auto
     +breakpoint(xlarge)
-      width: 2460px
+      width: 2496px
     +breakpoint(five)
-      width: 2050px
+      width: 2080px
     +breakpoint(four)
-      width: 1640px
+      width: 1664px
     +breakpoint(three)
-      width: 1230px
+      width: 1248px
     +breakpoint(two)
-      width: 820px
+      width: 832px
     +breakpoint(one)
       width: 410px
     .item
+      position: relative
       float: left
       width: 400px
       height: 300px
-      margin: 5px
+      margin: 8px
       overflow: hidden
-      position: relative
+      box-shadow: 0px 1px 1px rgba(0,0,0,0.6)
+      border-radius: 2px
       .caption
         display: none
         position: absolute
