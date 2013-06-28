@@ -51,7 +51,7 @@ $(document).ready ->
       $(this).find(".caption").fadeIn 250
 
     $(document).on "mouseleave", ".fade", (e) ->
-      $(this).find(".caption").fadeOut 250  
+      $(this).find(".caption").fadeOut 250
 
   init = ->
     # Grab 500px API Data
