@@ -11,6 +11,8 @@ $(document).ready ->
 
   bindEvents = ->
     $("#editors_choice").click ->
+      $(this).toggleClass 'active'
+      $("#popular").removeClass 'active'
       _500px.api "/photos",
         feature: 'editors',
         image_size: 440
@@ -19,6 +21,8 @@ $(document).ready ->
         $('.photos').empty()
         doStuffWithPhotos(response.data.photos)
     $("#popular").click ->
+      $(this).toggleClass 'active'
+      $("#editors_choice").removeClass 'active'
       _500px.api "/photos",
         feature: 'popular',
         image_size: 440

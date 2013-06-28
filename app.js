@@ -14,6 +14,8 @@
     };
     bindEvents = function() {
       $("#editors_choice").click(function() {
+        $(this).toggleClass('active');
+        $("#popular").removeClass('active');
         return _500px.api("/photos", {
           feature: 'editors',
           image_size: 440,
@@ -24,6 +26,8 @@
         });
       });
       return $("#popular").click(function() {
+        $(this).toggleClass('active');
+        $("#editors_choice").removeClass('active');
         return _500px.api("/photos", {
           feature: 'popular',
           image_size: 440,

@@ -109,6 +109,10 @@ table {
   color: #dddddd;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\0000331}}
+.nav ul li.active {
+  border-bottom: 3px solid #02adea;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\0000333}}
 .nav ul li a {
   text-decoration: none;
   color: inherit;
