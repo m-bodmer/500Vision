@@ -62,7 +62,7 @@ table {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\000033}}
 .wrap {
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\000031}}
@@ -126,10 +126,49 @@ body {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000315}}
 .artboard .photos {
-  margin: auto;
-  width: 100%;
+  margin: 0 auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000318}}
+@media (max-width: 2560px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000315}}
+  .artboard .photos {
+    width: 2460px;
+  }
+}
+@media (max-width: 2455px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000315}}
+  .artboard .photos {
+    width: 2050px;
+  }
+}
+@media (max-width: 2045px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000315}}
+  .artboard .photos {
+    width: 1640px;
+  }
+}
+@media (max-width: 1635px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000315}}
+  .artboard .photos {
+    width: 1230px;
+  }
+}
+@media (max-width: 1225px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000315}}
+  .artboard .photos {
+    width: 820px;
+  }
+}
+@media (max-width: 815px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000315}}
+  .artboard .photos {
+    width: 410px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000329}}
 .artboard .photos .item {
   float: left;
+  width: 400px;
+  height: 300px;
+  margin: 5px;
+  overflow: hidden;
 }

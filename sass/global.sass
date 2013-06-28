@@ -13,7 +13,23 @@ body
 
 .artboard
   .photos
-    margin: auto
-    width: 100%
+    margin: 0 auto
+    +breakpoint(xlarge)
+      width: 2460px
+    +breakpoint(five)
+      width: 2050px
+    +breakpoint(four)
+      width: 1640px
+    +breakpoint(three)
+      width: 1230px
+    +breakpoint(two)
+      width: 820px
+    +breakpoint(one)
+      width: 410px
     .item
       float: left
+      width: 400px
+      height: 300px
+      margin: 5px
+      overflow: hidden
+
