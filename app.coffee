@@ -9,8 +9,10 @@ $(document).ready ->
       photoImage =
         "<a href='http://www.500px.com/photo/#{photo.id}'><div class='item fade'>
            <div class='caption'>
-             <h3>#{photo.name}</h3>
-             <p>#{photo.description}</p>
+              <div class='content'>
+                <h1>#{photo.name}</h1>
+                <h6>by #{photo.user.fullname}</h6>
+              </div>
            </div>
           <img data-src=#{photoURL}  />
           </div>
@@ -59,10 +61,12 @@ $(document).ready ->
       false
 
     $(document).on "mouseenter", ".fade", (e) ->
-      $(this).find(".caption").fadeIn 250
+      caption = $(this).find(".caption")
+      caption.fadeIn 250
 
     $(document).on "mouseleave", ".fade", (e) ->
-      $(this).find(".caption").fadeOut 250
+      caption = $(this).find(".caption")
+      caption.fadeOut 250
 
   init = ->
     # Grab 500px API Data
