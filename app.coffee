@@ -3,6 +3,9 @@
 # Created by: Marc Bodmer & Ricardo Vazquez
 $(document).ready ->
 
+  lock = false
+  page = 1
+
   doStuffWithPhotos = (photos) ->
     $.each photos, (index, photo) ->
       photoURL = photo.image_url
@@ -19,6 +22,20 @@ $(document).ready ->
         </a>"
       $('.photos').append(photoImage)
 
+  loadMorePhotos = (photos) ->
+    $.each photos, (index, photo) ->
+      photoURL = photo.image_url
+      photoImage =
+        "<a href='http://www.500px.com/photo/#{photo.id}'><div class='item fade'>
+           <div class='caption'>
+             <h3>#{photo.name}</h3>
+             <p>#{photo.description}</p>
+           </div>
+          <img src=#{photoURL}  />
+          </div>
+        </a>"
+      $('.photos').append(photoImage)
+
   bindEvents = ->
     $("#editors_choice").click ->
       $(this).toggleClass 'active'
@@ -26,7 +43,7 @@ $(document).ready ->
       _500px.api "/photos",
         feature: 'editors',
         image_size: 440
-        page: 1
+        page: page
       , (response) ->
         $('.photos').empty()
         doStuffWithPhotos(response.data.photos)
@@ -38,20 +55,26 @@ $(document).ready ->
       _500px.api "/photos",
         feature: 'popular',
         image_size: 440
-        page: 1
+        page: page
       , (response) ->
         $('.photos').empty()
         doStuffWithPhotos(response.data.photos)
         $('.item img').unveil()
 
-    $('.wrap').infinitescroll ->
-      console.log 'scrolling'
-      # _500px.api "/photos",
-      #   feature: 'popular',
-      #   image_size: 440
-      #   page: 1
-      # , (response) ->
-      #   doStuffWithPhotos(response.data.photos)
+    $(window).scroll ->
+      
+      # Load more when user reaches close to the bottom of the window
+      if lock is false and $(window).scrollTop() > $(document).height() - $(window).height() * 2
+        lock = true
+        page++
+        console.log page
+        _500px.api "/photos",
+          feature: 'popular',
+          image_size: 440
+          page: page
+        , (response) ->
+          loadMorePhotos(response.data.photos)
+
 
   setPhotoProperties = ->
     $(document).on "dragstart", ".photos .item", (e) ->
@@ -75,7 +98,7 @@ $(document).ready ->
     _500px.api "/photos",
       feature: 'popular',
       image_size: 440
-      page: 1
+      page: page
     , (response) ->
       doStuffWithPhotos(response.data.photos)
       $('.item img').unveil()
