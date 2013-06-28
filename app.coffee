@@ -38,6 +38,8 @@ $(document).ready ->
         </a>"
       $('.photos').append(photoImage)
 
+    lock = false
+
   bindEvents = ->
     $("#editors_choice").click ->
       $(this).toggleClass 'active'
@@ -45,6 +47,7 @@ $(document).ready ->
       _500px.api "/photos",
         feature: 'editors',
         image_size: 440
+        rpp: 24
         page: page
       , (response) ->
         $('.photos').empty()
@@ -57,6 +60,7 @@ $(document).ready ->
       _500px.api "/photos",
         feature: 'popular',
         image_size: 440
+        rpp: 24
         page: page
       , (response) ->
         $('.photos').empty()
@@ -64,7 +68,6 @@ $(document).ready ->
         $('.item img').unveil()
 
     $(window).scroll ->
-      # Load more when user reaches close to the bottom of the window
       if lock is false and $(window).scrollTop() > $(document).height() - $(window).height() * 2
         lock = true
         page++
@@ -72,10 +75,10 @@ $(document).ready ->
         _500px.api "/photos",
           feature: 'popular',
           image_size: 440
+          rpp: 24
           page: page
         , (response) ->
           loadMorePhotos(response.data.photos)
-
 
   setPhotoProperties = ->
     $(document).on "dragstart", ".photos .item", (e) ->
@@ -95,10 +98,10 @@ $(document).ready ->
   init = ->
     # Grab 500px API Data
     # TODO: Make this private eventually....
-    _500px.init({sdk_key: 'e4671f3b61a876dfe887c5031b43d3dd900b63ce'})
     _500px.api "/photos",
       feature: 'popular',
       image_size: 440
+      rpp: 24
       page: page
     , (response) ->
       doStuffWithPhotos(response.data.photos)
@@ -106,5 +109,9 @@ $(document).ready ->
 
     bindEvents()
     setPhotoProperties()
+
+  sdk = (->
+    _500px.init({sdk_key: 'e4671f3b61a876dfe887c5031b43d3dd900b63ce'})
+  )()
 
   init()
