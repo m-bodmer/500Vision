@@ -8,7 +8,7 @@
         var photoImage, photoURL;
 
         photoURL = photo.image_url;
-        photoImage = "<div class='item fade'><img src=" + photoURL + "  /></div>";
+        photoImage = "<div class='item fade'>          <h3>" + photo.name + "</h3>          <img src=" + photoURL + "  />        </div>";
         return $('.photos').append(photoImage);
       });
     };

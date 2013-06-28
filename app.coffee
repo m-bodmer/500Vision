@@ -6,7 +6,11 @@ $(document).ready ->
   doStuffWithPhotos = (photos) ->
     $.each photos, (index, photo) ->
       photoURL = photo.image_url
-      photoImage = "<div class='item fade'><img src=#{photoURL}  /></div>"
+      photoImage =
+        "<div class='item fade'>
+          <h3>#{photo.name}</h3>
+          <img src=#{photoURL}  />
+        </div>"
       $('.photos').append(photoImage)
 
   bindEvents = ->
