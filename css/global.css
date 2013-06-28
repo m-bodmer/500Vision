@@ -1,0 +1,120 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_reset\.sass}line{font-family:\000035}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: white;
+}
+
+/* HTML5 display-role reset for older browsers */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_reset\.sass}line{font-family:\0000327}}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_reset\.sass}line{font-family:\0000331}}
+body {
+  line-height: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_reset\.sass}line{font-family:\0000334}}
+ol, ul {
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_reset\.sass}line{font-family:\0000337}}
+blockquote, q {
+  quotes: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_reset\.sass}line{font-family:\0000340}}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_reset\.sass}line{font-family:\0000345}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\000031}}
+.wrap {
+  width: 100%;
+  margin: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\000035}}
+.logo {
+  width: 100px;
+  height: 20px;
+  margin: 0.13em 0 0 2em;
+  float: left;
+  background-size: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000313}}
+.nav {
+  width: 100%;
+  height: 20px;
+  padding: 10px 0;
+  background: #222222;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000318}}
+.nav ul {
+  position: relative;
+  float: right;
+  font-size: 14px;
+  line-height: 19px;
+  padding-right: 3em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000324}}
+.nav ul li {
+  display: inline-block;
+  padding: 0 0.6em 0.6em 0.6em;
+  margin: 0 1.5em 0 0;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000329}}
+.nav ul li:last-of-type {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000331}}
+.nav ul li:hover {
+  border-bottom: 3px solid #02adea;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000333}}
+.nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000336}}
+.nav ul li a:active {
+  color: #02adea;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\000034}}
+html {
+  font-family: Helvetica;
+}
