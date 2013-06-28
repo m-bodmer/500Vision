@@ -63,8 +63,7 @@ $(document).ready ->
         doStuffWithPhotos(response.data.photos)
         $('.item img').unveil()
 
-    $(window).scroll ->
-      
+    $(window).scroll -
       # Load more when user reaches close to the bottom of the window
       if lock is false and $(window).scrollTop() > $(document).height() - $(window).height() * 2
         lock = true
