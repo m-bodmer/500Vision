@@ -28,10 +28,12 @@ $(document).ready ->
       photoImage =
         "<a href='http://www.500px.com/photo/#{photo.id}'><div class='item fade'>
            <div class='caption'>
-             <h3>#{photo.name}</h3>
-             <p>#{photo.description}</p>
+              <div class='content'>
+                <h1>#{photo.name}</h1>
+                <h6>by #{photo.user.fullname}</h6>
+              </div>
            </div>
-          <img src=#{photoURL}  />
+          <img data-src=#{photoURL}  />
           </div>
         </a>"
       $('.photos').append(photoImage)
