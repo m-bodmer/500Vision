@@ -59,13 +59,13 @@ table {
   border-spacing: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\000033}}
 .wrap {
   width: 100%;
   margin: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\000031}}
 .logo {
   width: 100px;
   height: 20px;
@@ -74,14 +74,14 @@ table {
   background-size: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\000039}}
 .nav {
   width: 100%;
   height: 20px;
   padding: 10px 0;
   background: #222222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\0000314}}
 .nav ul {
   position: relative;
   float: right;
@@ -89,32 +89,43 @@ table {
   line-height: 19px;
   padding-right: 3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\0000320}}
 .nav ul li {
   display: inline-block;
   padding: 0 0.6em 0.6em 0.6em;
-  margin: 0 1.5em 0 0;
+  margin: 0 1em 0 0;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\0000325}}
 .nav ul li:last-of-type {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\0000327}}
 .nav ul li:hover {
   border-bottom: 3px solid #02adea;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\0000329}}
+.nav ul li:hover a {
+  color: #dddddd;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_nav\.sass}line{font-family:\0000331}}
 .nav ul li a {
   text-decoration: none;
   color: inherit;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/_grid\.sass}line{font-family:\0000336}}
-.nav ul li a:active {
-  color: #02adea;
-}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\000035}}
 html {
   font-family: Helvetica;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\000038}}
+body {
+  background: #efefef;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/RicardoVazquez\/Desktop\/500Vision\/sass\/global\.sass}line{font-family:\0000315}}
+.artboard .photos {
+  margin: auto;
+  width: 100%;
 }
