@@ -47,8 +47,7 @@ $(document).ready ->
       _500px.api "/photos",
         feature: 'editors',
         image_size: 440
-        only: 'Nude'
-        # exclude: 4
+        exclude: 'Nude'
         rpp: 24
         page: page
       , (response) ->
@@ -62,8 +61,7 @@ $(document).ready ->
       _500px.api "/photos",
         feature: 'popular',
         image_size: 440
-        only: 'Nude'
-        # exclude: 4
+        exclude: 'Nude'
         rpp: 24
         page: page
       , (response) ->
@@ -78,8 +76,7 @@ $(document).ready ->
         _500px.api "/photos",
           feature: 'popular',
           image_size: 440
-          only: 'Nude'
-          # exclude: 4
+          exclude: 'Nude'
           rpp: 24
           page: page
         , (response) ->
@@ -102,12 +99,10 @@ $(document).ready ->
 
   init = ->
     # Grab 500px API Data
-    # TODO: Make this private eventually....
     _500px.api "/photos",
       feature: 'popular',
       image_size: 440
-      only: 'Nude'
-      # exclude: 4
+      exclude: 'Nude'
       rpp: 24
       page: page
     , (response) ->
