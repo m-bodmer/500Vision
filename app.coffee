@@ -5,6 +5,7 @@ $(document).ready ->
 
   lock = false
   page = 1
+  category = 'popular'
 
   doStuffWithPhotos = (photos) ->
     $.each photos, (index, photo) ->
@@ -44,8 +45,11 @@ $(document).ready ->
     $("#editors_choice").click ->
       $(this).toggleClass 'active'
       $("#popular").removeClass 'active'
+
+      category = 'editors'
+
       _500px.api "/photos",
-        feature: 'editors',
+        feature: category,
         image_size: 440
         exclude: 'Nude'
         rpp: 24
@@ -58,8 +62,11 @@ $(document).ready ->
     $("#popular").click ->
       $(this).toggleClass 'active'
       $("#editors_choice").removeClass 'active'
+
+      category = 'popular'
+
       _500px.api "/photos",
-        feature: 'popular',
+        feature: category,
         image_size: 440
         exclude: 'Nude'
         rpp: 24
@@ -74,7 +81,7 @@ $(document).ready ->
         lock = true
         page++
         _500px.api "/photos",
-          feature: 'popular',
+          feature: category,
           image_size: 440
           exclude: 'Nude'
           rpp: 24
