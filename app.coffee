@@ -1,16 +1,31 @@
 # 500px Hack Day Project
-# May 24, 2013
-# Created by: Marc Bodmer
+# June 28, 2013
+# Created by: Marc Bodmer & Ricardo Vazquez
 $(document).ready ->
 
   doStuffWithPhotos = (photos) ->
     $.each photos, (index, photo) ->
-      console.log index
-      console.log photo
-      console.log '-------'
       photoURL = photo.image_url
-      photoImage = "<div class='item'><img src=\" " + photoURL + "\"/></div>"
+      photoImage = "<div class='item'><img src=#{photoURL}  /></div>"
       $('.photos').append(photoImage)
+
+  bindEvents = ->
+    $("#editors_choice").click ->
+      _500px.api "/photos",
+        feature: 'editors',
+        image_size: 440
+        page: 1
+      , (response) ->
+        $('.photos').empty()
+        doStuffWithPhotos(response.data.photos)
+    $("#popular").click ->
+      _500px.api "/photos",
+        feature: 'popular',
+        image_size: 440
+        page: 1
+      , (response) ->
+        $('.photos').empty()
+        doStuffWithPhotos(response.data.photos)
 
   init = ->
     # Grab 500px API Data
@@ -22,5 +37,7 @@ $(document).ready ->
       page: 1
     , (response) ->
       doStuffWithPhotos(response.data.photos)
+
+    bindEvents()
 
   init()
