@@ -27,6 +27,14 @@ $(document).ready ->
         $('.photos').empty()
         doStuffWithPhotos(response.data.photos)
 
+  setPhotoProperties = ->
+    $(document).on "dragstart", ".photos .item", (e) ->
+      e.preventDefault()
+
+    $(document).on "contextmenu", ".photos .item img", (e) ->
+      false
+
+
   init = ->
     # Grab 500px API Data
     # TODO: Make this private eventually....
@@ -39,5 +47,6 @@ $(document).ready ->
       doStuffWithPhotos(response.data.photos)
 
     bindEvents()
+    setPhotoProperties()
 
   init()
