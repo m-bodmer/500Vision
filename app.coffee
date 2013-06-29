@@ -47,6 +47,7 @@ $(document).ready ->
       $("#popular").removeClass 'active'
 
       category = 'editors'
+      page = 1
 
       _500px.api "/photos",
         feature: category,
@@ -64,6 +65,7 @@ $(document).ready ->
       $("#editors_choice").removeClass 'active'
 
       category = 'popular'
+      page = 1
 
       _500px.api "/photos",
         feature: category,
@@ -77,7 +79,7 @@ $(document).ready ->
         $('.item img').unveil()
 
     $(window).scroll ->
-      if lock is false and $(window).scrollTop() > $(document).height() - $(window).height() * 2
+      if lock is false and $(window).scrollTop() > $(document).height() - 2000
         lock = true
         page++
         _500px.api "/photos",
